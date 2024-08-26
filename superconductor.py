@@ -260,7 +260,7 @@ def experiment(seed: int) -> Array:
     particle_y = task.predict(task.denormalize_x(particle_samples))
     best_y = jnp.max(particle_y)
 
-    return best_y / get_y_max()
+    return best_y, best_y / get_y_max()
 
 
 if __name__ == "__main__":
@@ -274,7 +274,7 @@ if __name__ == "__main__":
 
     # Iterate over seeds, run experiment, and store results
     for seed in seeds:
-        result = experiment(seed)
-        df_row = pd.DataFrame({"Seed": [seed], "Result": [result]})
+        result, result_norm = experiment(seed)
+        df_row = pd.DataFrame({"seed": [seed], "score": [result], "score_norm": [result_norm]})
         df_row.to_csv(output_file, mode="a", header=False, index=False)
         print(f"Seed: {seed}, Result: {result} - Saved to {output_file}")
