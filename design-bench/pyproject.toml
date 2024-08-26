@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "design-bench"
+version = "0.1.0"
+description = ""
+authors = ["Ben Dowling <ben.dowling@icloud.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "*"
+scikit-learn = "0.23.1"
+huggingface-hub = "*"
+numpy = "*"
+scipy = "*"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

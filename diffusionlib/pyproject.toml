@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "diffusionlib"
+version = "0.1.0"
+description = "Library for diffusion modelling and inverse problem solving"
+authors = ["Ben Dowling <ben.dowling@icloud.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "*"
+numpy = "*"
+particles = {extras = ["extra"], version = "*"}
+jax = {extras = ["cuda12"], version = "*"}
+
+[tool.ruff]
+# E - pycodestyle error
+# F - pyflakes
+# I - isort
+# N - pep8-naming
+# W - pycodestyle warn
+# UP - pyupgrade
+# TODO: D - pydocstyle
+select = ["E", "F", "I", "N", "W", "UP"]
+
+ignore = [
+    "N812", # lowercase-imported-as-non-lowercase
+    "F722" # forward-annotation-syntax-error; for jaxtyping
+]
+
+line-length = 100
