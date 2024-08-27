@@ -1,8 +1,0 @@
-,superconductor
-cbas,80.082 ± 4.933
-cma-es,87.774 ± 3.965
-gradient-ascent,90.885 ± 1.949
-gradient-ascent-min-ensemble,94.414 ± 1.719
-gradient-ascent-mean-ensemble,93.070 ± 2.259
-mins,87.483 ± 0.481
-reinforce,89.351 ± 2.708

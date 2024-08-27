@@ -1,3 +1,5 @@
+# data
+*.csv
 design-bench/design_bench_data
 
 # Byte-compiled / optimized / DLL files
