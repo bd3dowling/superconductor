@@ -1,6 +1,7 @@
 # data
 *.csv
 design-bench/design_bench_data
+*.pdf
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
